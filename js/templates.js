@@ -2,7 +2,7 @@
 export const heroHtml = (id, headline, text, CTAs, img) => {
     return `
         <div class="   
-            flex-shrink-0 max-w-full
+            flex-shrink-0 w-full
 
             relative bg-[#DCC1AB]
 
@@ -59,12 +59,13 @@ export const heroHtml = (id, headline, text, CTAs, img) => {
                 min-[900px]:ml-auto
 
                 min-[900px]:w-[47.78%]
+                max-[900px]:h-[600px] max-[700px]:h-[500px] h-full
+
+                flex
             " id="hero-photo">
                 <img src="${img}" alt="it's a hero image" class="
-                    scale-x-[-1]
-                    max-[900px]:h-[600px] max-[700px]:h-[500px]
-                    max-[900px]:w-full
-                    max-[900px]:object-cover
+                    flex-1 scale-x-[-1]
+                    object-cover object-center
                 ">
             </div>
         </div>

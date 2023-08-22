@@ -55,6 +55,13 @@ renderHeros()
 let currentHero = 0
 
 
+// SCROLL TO HERO
+function heroScroll() {
+    id('hero-inside').scroll({left: document.body.clientWidth * currentHero, behavior: 'smooth'})
+}
+const debounceHeroScroll = debounce(() => heroScroll())
+
+
 // HERO SLIDER
 id('hero').addEventListener('click', e => {
     if (id('previous-hero').contains(e.target)) {
@@ -71,7 +78,12 @@ id('hero').addEventListener('click', e => {
             currentHero++
         }
     }
-    id(`hero-${currentHero}`).scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'})
+    heroScroll()
+})
+
+
+window.addEventListener('resize', () => {
+    debounceHeroScroll()
 })
 
 
@@ -172,3 +184,12 @@ document.addEventListener('click', e => {
         lightbox.init()
     }
 })
+
+// FUNCTION DEBOUNCE
+function debounce(func, timeout = 50){
+    let timer
+    return (...args) => {
+      clearTimeout(timer)
+      timer = setTimeout(() => { func.apply(this, args) }, timeout)
+    }
+  }
