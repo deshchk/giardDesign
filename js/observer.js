@@ -18,7 +18,7 @@ onVisible(id('oferta'), () => {
     setTimeout(() => {
         id('oferta-cards').dataset.visible = true
     }, 500)
-}, .35)
+}, .32)
 
 onVisible(id('o-firmie'), () => {
     let time = 700

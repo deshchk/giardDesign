@@ -2,72 +2,83 @@
 export const heroHtml = (id, headline, text, CTAs, img) => {
     return `
         <div class="   
+            relative
             flex-shrink-0 w-full
+            flex justify-center
+        " id="slide-${id}">
 
-            relative bg-[#DCC1AB]
-
-            xl:max-h-[737px] min-[900px]:max-h-[630px]
-            overflow-hidden min-[901px]:grid
-
-            grid-cols-[100%] grid-rows-[100%] min-[901px]:items-start
-            flex flex-col
-
-            xl:pl-[89px] lg:pl-16 min-[900px]:pl-8
-        " id="hero-${id}">
             <div class="
-                relative z-20
-                row-span-full col-span-full
-                flex-1
+                single-hero-wrapper
+                max-w-[1440px] w-full
+            
+                xl:h-[737px] min-[901px]:h-[630px]
+                overflow-hidden min-[901px]:grid
 
-                min-[1151px]:w-[599px]
-                min-[901px]:w-[41.597%]
-                max-[900px]:pt-10 max-[900px]:pb-[50px] max-[900px]:px-14
-                max-[400px]:pt-7 max-[400px]:pb-[40px]
+                grid-cols-[100%] grid-rows-[100%] min-[901px]:items-start
+                flex flex-col
 
-                self-center flex flex-col justify-center
-                xl:gap-[72px] gap-14
-            " id="hero-content">
-                <div>
-                    <h2 class="
-                        font-montserrat font-medium
-                        min-[1150px]:text-6xl min-[531px]:text-[50px] min-[490px]:text-5xl min-[410px]:text-[40px] text-4xl
-                        min-[1150px]:leading-[1.16] min-[531px]:leading-[1.16] min-[490px]:leading-[1.16] min-[410px]:leading-[1.16] leading-[1.16]
-                        mb-11
-                    ">${headline}</h2>
-                    <p class="
-                        min-[1000px]:max-w-[81.63%]
-                        max-[900px]:max-w-[82%]
-                        text-base max-[1150px]:text-sm max-[1150px]:leading-snug
-                    ">${text}</p>
+                xl:pl-[89px] lg:pl-16 min-[900px]:pl-8
+            ">
+
+                <div class="
+                    slide-content
+                    relative z-20
+                    row-span-full col-span-full
+                    flex-1
+
+                    min-[1151px]:w-[599px]
+                    min-[901px]:w-[41.597%]
+                    max-[900px]:pt-10 max-[900px]:pb-[50px] max-[900px]:px-14
+                    max-[400px]:pt-7 max-[400px]:pb-[40px]
+
+                    self-center flex flex-col justify-center
+                    xl:gap-[72px] gap-14
+                " id="hero-content">
+                    <div>
+                        <h2 class="
+                            font-montserrat font-medium
+                            min-[1150px]:text-6xl min-[531px]:text-[50px] min-[490px]:text-5xl min-[410px]:text-[40px] text-4xl
+                            min-[1150px]:leading-[1.16] min-[531px]:leading-[1.16] min-[490px]:leading-[1.16] min-[410px]:leading-[1.16] leading-[1.16]
+                            mb-11
+                        ">${headline}</h2>
+                        <p class="
+                            min-[1000px]:max-w-[81.63%]
+                            max-[900px]:max-w-[82%]
+                            text-base max-[1150px]:text-sm max-[1150px]:leading-snug
+                        ">${text}</p>
+                    </div>
+                    
+                    ${CTAs
+                        ? `<div class="
+                                flex flex-wrap
+                                xl:gap-x-9 gap-x-6 gap-y-4
+                            ">
+                                ${CTAs}
+                            </div>`
+                        : ''
+                    }
                 </div>
-                
-                ${CTAs
-                    ? `<div class="
-                            flex flex-wrap
-                            xl:gap-x-9 gap-x-6 gap-y-4
-                        ">
-                            ${CTAs}
-                        </div>`
-                    : ''
-                }
+
+                <div class="
+                    slide-img
+                    min-[901px]:absolute relative z-10
+                    row-span-full col-span-full
+
+                    min-[901px]:right-0
+
+                    min-[901px]:w-[47.78%] min-[901px]:max-w-[699px]
+                    max-[900px]:h-[600px] max-[700px]:h-[500px] h-full
+
+                    flex
+                " id="hero-photo">
+                    <img src="${img}" alt="it's a hero image" class="
+                        flex-1 scale-x-[-1]
+                        object-cover object-center
+                    ">
+                </div>
+
             </div>
 
-            <div class="
-                relative z-10
-                row-span-full col-span-full
-
-                min-[900px]:ml-auto
-
-                min-[900px]:w-[47.78%]
-                max-[900px]:h-[600px] max-[700px]:h-[500px] h-full
-
-                flex
-            " id="hero-photo">
-                <img src="${img}" alt="it's a hero image" class="
-                    flex-1 scale-x-[-1]
-                    object-cover object-center
-                ">
-            </div>
         </div>
     `
 }
@@ -85,7 +96,11 @@ export const heroNav = `
 
             grid place-items-center w-12 h-12
         " id="previous-hero" type="button">
-            <svg class="group-hover:fill-[#666] group-focus:fill-[#666] transition-all"
+            <svg class="
+            group-hover:fill-[#666] group-focus:fill-[#666]
+              group-hover:scale-125 group-focus:scale-125
+              transition-all
+            "
                 xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="black">
                     <path d="M0.795115 10.9393C0.209328 11.5251 0.209328 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.80761 10.9268 0.80761 10.3411 1.3934L0.795115 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"/>
             </svg>
@@ -95,7 +110,11 @@ export const heroNav = `
 
             grid place-items-center w-12 h-12
         " id="next-hero" type="button">
-            <svg class="group-hover:fill-[#666] group-focus:fill-[#666] transition-all"
+            <svg class="
+            group-hover:fill-[#666] group-focus:fill-[#666]
+              group-hover:scale-125 group-focus:scale-125
+              transition-all
+            "
                 xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="black">
                     <path d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807611 15.1234 0.807611 14.5376 1.3934C13.9518 1.97919 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"/>
             </svg>
@@ -120,6 +139,7 @@ export const fullCTA = (href, inside) => {
 
             hover:scale-105 focus:scale-105
             hover:bg-[#10371e] focus:bg-[#10371e]
+            hover:drop-shadow-xl
             outline-none transition-all
 
             select-none
@@ -133,6 +153,8 @@ export const borderCTA = (href, inside) => {
     return `
         <a class="
             group
+            relative overflow-hidden z-0
+            
             rounded-full
 
             text-[#1B5B31] lg:text-base text-sm 
@@ -148,10 +170,18 @@ export const borderCTA = (href, inside) => {
 
             outline-none
 
-            hover:bg-[#1B5B31] focus:bg-[#1B5B31]
+            before:content-[''] before:absolute
+            before:w-[300px] before:h-[300px]
+            before:mt-[-150px] before:ml-[-150px]
+            before:top-1/2 before:left-1/2
+            before:origin-center before:border-1 before:border-[#1B5B31]
+            before:z-[-1] before:rounded-[50%]
+
+            hover:before:border-[150px]
+
             hover:text-[#F5F0EC] focus:text-[#F5F0EC]
 
-            transition-colors
+            transition-all before:transition-all before:duration-[400ms]
 
             select-none
         " href="${href}">

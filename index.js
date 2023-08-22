@@ -73,7 +73,7 @@ let currentHero = 0
 
 // SCROLL TO HERO
 function heroScroll() {
-    id('hero-inside').scroll({left: document.body.clientWidth * currentHero, behavior: 'smooth'})
+    id('hero-inside').scroll({left: id('hero-inside').clientWidth * currentHero, behavior: 'smooth'})
 }
 const debounceHeroScroll = debounce(() => heroScroll())
 
@@ -97,7 +97,7 @@ id('hero').addEventListener('click', e => {
     heroScroll()
 })
 
-
+// HERO RESCROLL _ON RESIZE
 window.addEventListener('resize', () => {
     debounceHeroScroll()
 })
@@ -107,11 +107,11 @@ window.addEventListener('resize', () => {
 
 // REALIZACJE BUTTONS
 function addLoadBtn() {
-    id('realizacje').innerHTML += loadBtnHtml
+    id('realizacje-wrapper').innerHTML += loadBtnHtml
 }
 
 function addCollapseBtn() {
-    id('realizacje').innerHTML += collapseBtnHtml
+    id('realizacje-wrapper').innerHTML += collapseBtnHtml
 }
 
 
@@ -132,7 +132,7 @@ async function renderPhotos(page, first) {
             <a href="${result.urls.full}" 
                 data-pswp-width="${result.width}"
                 data-pswp-height="${result.height}"
-            target="_blank" class="flex">
+            target="_blank" class="flex hover:translate-y-[-8px] hover:saturate-150 transition-all">
                 <img src="${result.urls.small}" alt="Photo showing ${result.alt_description} by ${result.user.username} on Unsplash" id="photo-${data.results.indexOf(result)}" class="flex-1">
             </a>
         `
@@ -181,19 +181,19 @@ addLoadBtn()
 // REALIZACJE BUTTONS _ON CLICK
 document.addEventListener('click', e => {
     if (id('load-realizacje-btn')?.contains(e.target)) {
-        if (id('realizacje').children.length < 12) {
+        if (id('realizacje-wrapper').children.length < 12) {
             renderPhotos(2)
         }
     
-        id('realizacje').classList.remove('overflow-clip', 'xl:max-h-[1824px]', 'lg:max-h-[1200px]', 'md:max-h-[950px]', 'max-h-[780px]')
-        id('realizacje').classList.add('max-h-[9999px]')
+        id('realizacje-wrapper').classList.remove('overflow-clip', 'xl:max-h-[1824px]', 'lg:max-h-[1200px]', 'md:max-h-[950px]', 'max-h-[780px]')
+        id('realizacje-wrapper').classList.add('max-h-[9999px]')
     
         id('gradient-btn').remove()
         addCollapseBtn()
     }
     if (id('collapse-realizacje-btn')?.contains(e.target)) {
-        id('realizacje').classList.remove('max-h-[9999px]')
-        id('realizacje').classList.add('overflow-clip', 'xl:max-h-[1824px]', 'lg:max-h-[1200px]', 'md:max-h-[950px]', 'max-h-[780px]')
+        id('realizacje-wrapper').classList.remove('max-h-[9999px]')
+        id('realizacje-wrapper').classList.add('overflow-clip', 'xl:max-h-[1824px]', 'lg:max-h-[1200px]', 'md:max-h-[950px]', 'max-h-[780px]')
 
         id('collapse-btn').remove()
         addLoadBtn()
