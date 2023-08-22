@@ -38,7 +38,10 @@
     <!-- HEADER -->
         <header class="
             fixed z-40 w-full top-0
-            bg-white
+            bg-white data-[scrolled=true]:bg-[#ffffffcc]
+            hover:bg-white
+            
+            transition-colors
             flex justify-center
         " id="header">
 
@@ -728,7 +731,8 @@
                 </div>
 
                 <div class="
-                    peer
+                    peer max-h-[9000px] data-[invisible=true]:max-h-0 transition-[max-height] duration-500
+                    overflow-hidden
                 " id="projekty-imgs">
                     <img class="block mx-auto pb-12" src="./imgs/load.svg" alt="Zdjęcia właśnie się ładują">
                 </div>

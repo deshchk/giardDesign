@@ -241,7 +241,7 @@ export const collapseBtnHtml = `
         flex gap-x-2 items-center w-fit
         px-[22px] pt-3 pb-[14px]
 
-        bg-[#DCC1AB]
+        bg-[#DCC1ABaa]
 
         border border-1 border-[#111]
         hover:border-[#1B5B31] focus:border-[#1B5B31]
