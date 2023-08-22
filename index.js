@@ -10,6 +10,22 @@ const id = DOMid => document.getElementById(DOMid)
 const clickKlass = (el, klass) => el.classList.contains(klass) ? el.classList.remove(klass) : el.classList.add(klass)
 
 
+
+// WEBSITE START
+setTimeout(() => {
+    id('start-overlay').classList.remove('opacity-100')
+    id('start-overlay').classList.add('opacity-0')
+
+    setTimeout(() => {
+        document.body.classList.remove('overflow-hidden')
+    }, 350)
+    setTimeout(() => {
+        id('start-overlay').remove()
+    }, 500)
+}, 300)
+    
+
+
 // MENU and SUBMENU _ON CLICK
 id('menu-btn')?.addEventListener('click', () => {
     clickKlass(id('peer-menu'), 'open')
@@ -117,7 +133,7 @@ async function renderPhotos(page, first) {
                 data-pswp-width="${result.width}"
                 data-pswp-height="${result.height}"
             target="_blank" class="flex">
-                <img src="${result.urls.small}" alt="Photo showing ${result.alt_description} by ${result.user.username} on Unsplash" id="photo-${data.results.indexOf(result)}" class="flex-1 w-full h-auto">
+                <img src="${result.urls.small}" alt="Photo showing ${result.alt_description} by ${result.user.username} on Unsplash" id="photo-${data.results.indexOf(result)}" class="flex-1">
             </a>
         `
     }).join('')
@@ -192,4 +208,4 @@ function debounce(func, timeout = 50){
       clearTimeout(timer)
       timer = setTimeout(() => { func.apply(this, args) }, timeout)
     }
-  }
+}

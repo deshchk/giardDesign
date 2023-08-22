@@ -17,8 +17,19 @@
     <script defer src="index.js" type="module"></script>
 </head>
 <body class="
-    font-inter text-[#111] font-normal
+    font-inter text-[#111] font-normal overflow-hidden
 ">
+<!-- STARTING OVERLAY -->
+    <div class="
+        absolute inset-0 z-50
+        bg-white opacity-100
+        grid place-content-center place-items-center gap-5
+        text-2xl italic tracking-wide
+        transition-opacity duration-700
+    " id="start-overlay">
+        Recruitment project for
+        <img class="block h-10" src="../imgs/logo-full-dark.svg" alt="adRespect logo">
+    </div>
 <!-- HEADER -->
     <header class="
         xl:px-[89px] lg:px-16 px-8 py-6
