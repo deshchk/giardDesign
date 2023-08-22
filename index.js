@@ -21,7 +21,7 @@ setTimeout(() => {
     }, 350)
     setTimeout(() => {
         id('start-overlay').remove()
-    }, 500)
+    }, 800)
 }, 300)
     
 

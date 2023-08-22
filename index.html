@@ -15,17 +15,18 @@
     <link rel="stylesheet" href="./css/photoswipe.css">
     <!-- scripts -->
     <script defer src="index.js" type="module"></script>
+    <script defer src="./js/observer.js" type="module"></script>
 </head>
 <body class="
     font-inter text-[#111] font-normal overflow-hidden
 ">
 <!-- STARTING OVERLAY -->
     <div class="
-        absolute inset-0 z-50
+        fixed inset-0 z-50
         bg-white opacity-100
         grid place-content-center place-items-center gap-5
         text-2xl italic tracking-wide
-        transition-opacity duration-700
+        transition-opacity duration-1000
     " id="start-overlay">
         Recruitment project for
         <img class="block h-10" src="../imgs/logo-full-dark.svg" alt="adRespect logo">
@@ -240,7 +241,11 @@
         xl:gap-y-24 lg:gap-y-20 md:gap-y-16 gap-y-14
     " id="oferta">
 
-        <div class="w-10/12 self-center" id="oferta-text">
+        <div class="
+            w-10/12 self-center overflow-hidden
+            data-[visible=true]:max-h-[350px] max-h-0
+            transition-all duration-1000
+        " id="oferta-text">
             <p class="
                 text-xs text-[#1B5B31]
                 leading-normal tracking-[-.12px]
@@ -270,7 +275,10 @@
             min-[500px]:px-6 min-[550px]:px-8 xl:px-0 min-[1600px]:px-16
             flex flex-wrap min-[908px]:justify-evenly
             xl:gap-[64px] lg:gap-14 md:gap-10 gap-8
-        ">
+
+            data-[visible=true]:translate-x-0 translate-x-[-2000px]
+            transition-all duration-1000
+        " id="oferta-cards">
 
             <button class="
                 relative group outline-none
@@ -554,6 +562,8 @@
     </div>
 
     <div class="
+        data-[visible=false]:p-0
+
         xl:pl-24 lg:pl-20 min-[900px]:pl-8
 
         relative z-20
@@ -567,7 +577,11 @@
 
         self-center flex flex-col justify-center
         xl:gap-[72px] gap-14
-    " id="o-firmie-content">
+
+        overflow-hidden
+        data-[visible=true]:max-h-[1000px] max-h-0
+        transition-all duration-[1500ms]
+    " id="o-firmie-text" data-visible="false">
         <div>
             <p class="text-xs leading-normal text-[#F5F0EC] tracking-[-.12px] mb-4">O firmie</p>
             <h2 class="
@@ -659,7 +673,9 @@
         bg-[#F5F0EC]
         xl:px-[200px] lg:p-[60px] md:p-10 p-6
         flex justify-center
+        overflow-hidden
     " id="instagram">
+
         <div class="
             w-full
             bg-[#1B5B31] text-[#F5F0EC]
@@ -667,7 +683,10 @@
             lg:py-[120px] md:py-24 pt-8 pb-10
             flex max-md:flex-col gap-16
             justify-evenly
-        ">
+
+            data-[visible=true]:translate-x-0 translate-x-[2000px]
+            transition-transform duration-1000
+        " id="instagram-inside">
             <div class="
                 font-montserrat font-normal
                 md:self-end
