@@ -17,7 +17,7 @@ export const heroData = [
                 </svg>
             `)}
         `,
-        img: '../imgs/hero.jpeg',
+        img: '../imgs/hero.webp',
     },
     {
         headline: 'Zajefajny aranż Twojego ogrodu',
@@ -32,7 +32,7 @@ export const heroData = [
                 </svg>
             `)}
         `,
-        img: '../imgs/hero2.jpeg',
+        img: '../imgs/hero2.webp',
     },
     {
         headline: 'Nazywam się Daniel Leszczak',
@@ -40,6 +40,6 @@ export const heroData = [
         CTAs: `
             ${full('https://deszczak.work', 'Napisz do mnie')}
         `,
-        img: '../imgs/hero3.jpeg',
+        img: '../imgs/hero3.webp',
     },
 ]

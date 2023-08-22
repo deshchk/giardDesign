@@ -24,7 +24,7 @@
         flex flex-wrap items-center justify-between
     " id="header">
         <div class="peer group flex justify-between max-[1000px]:w-full items-center" id="peer-menu">
-            <a href="#" class="
+            <a href="#" aria-label="giarddesign" class="
                 group/link
                 focus:outline-dashed 
                 outline-[#1B5B3133] outline-1 outline-offset-8
@@ -50,7 +50,7 @@
                 </svg>
             </a>
         <!-- NAV -->
-            <button class="
+            <button aria-label="menu" class="
                 min-[1001px]:hidden
 
                 group-[.open]:rotate-[135deg]
@@ -60,7 +60,7 @@
 
                 transition-all
             " id="menu-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
                     <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
                     <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
@@ -186,7 +186,7 @@
             </menu>
             
             <div class="flex" id="nav-search">
-                <button type="button" class="
+                <button type="button" aria-label="search" class="
                     peer self-end order-2
 
                     focus:outline-dashed 
@@ -200,14 +200,14 @@
                 
                 <input class="
                     border-b border-neutral-500
-                    outline outline-0
+                    outline outline-0 rounded-none
                     font-inter text-sm
                     order-1
 
                     max-w-0 peer-[.is-searching]:max-w-[166px]
                     peer-[.is-searching]:mr-4
                     overflow-hidden transition-all
-                " id="nav-search-input" type="text">
+                " id="nav-search-input" type="text" aria-label="searchbox">
             </div>
 
         </nav>
@@ -533,7 +533,7 @@
 
         min-[900px]:w-[47.78%]
     " id="o-firmie-photo">
-        <img src="../imgs/o-firmie.jpeg" alt="it's a hero image" class="
+        <img src="../imgs/o-firmie.webp" alt="it's a hero image" class="
             scale-x-[-1]
             max-[900px]:h-[600px] max-[700px]:h-[500px] h-[720px]
             w-full
@@ -764,10 +764,10 @@
             mb-20  
         ">
             <p class="text-base tracking-[-.16px] font-normal">Prawa zastrzeżone © 2022</p>
-            <a href="http://adrespect.pl" target="_blank">
+            <a href="http://adrespect.pl" aria-label="adRespect" target="_blank">
                 <div class="flex gap-x-4 items-center">
                     <span class="inline-block max-[555px]:hidden">made by</span>
-                    <img class="inline-block max-[445px]:ml-[-15px] max-[445px]:scale-75" src="../imgs/logo-full-light.svg">
+                    <img class="inline-block max-[445px]:ml-[-15px] max-[445px]:scale-75" src="../imgs/logo-full-light.svg" alt="adRespect logo">
                 </div>
             </a>
         </div>

@@ -105,7 +105,7 @@ async function renderPhotos(page, first) {
                 data-pswp-width="${result.width}"
                 data-pswp-height="${result.height}"
             target="_blank" class="flex">
-                <img src="${result.urls.small}" alt="Photo showing ${result.alt_description} by ${result.user.username} on Unsplash" id="photo-${data.results.indexOf(result)}" class="flex-1">
+                <img src="${result.urls.small}" alt="Photo showing ${result.alt_description} by ${result.user.username} on Unsplash" id="photo-${data.results.indexOf(result)}" class="flex-1 w-full h-auto">
             </a>
         `
     }).join('')
