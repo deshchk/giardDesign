@@ -159,7 +159,7 @@ async function renderPhotos(page, first) {
                 columns: 2,
                 margin: 28,
             },
-            400: {
+            420: {
                 columns: 1,
                 margin: 20,
             },
