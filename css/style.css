@@ -775,6 +775,10 @@ video {
   max-height: 9300px;
 }
 
+.max-h-\[9500px\] {
+  max-height: 9500px;
+}
+
 .w-10\/12 {
   width: 83.333333%;
 }
@@ -1482,6 +1486,10 @@ video {
 
 .duration-\[max-height_2s\2c _opacity_1s\] {
   transition-duration: max-height 2s, opacity 1s;
+}
+
+.duration-\[max-height_3000ms\2c _opacity_1500ms\] {
+  transition-duration: max-height 3000ms, opacity 1500ms;
 }
 
 .before\:pointer-events-none::before {
