@@ -19,8 +19,8 @@ onVisible(id('oferta'), () => {
     }, 100)
     setTimeout(() => {
         id('oferta-cards').dataset.visible = true
-    }, 300)
-}, .32)
+    }, 350)
+}, window.matchMedia('(max-width: 600px)').matches ? .15 : .32)
 
 
 onVisible(id('o-firmie'), () => {
