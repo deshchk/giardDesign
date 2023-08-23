@@ -1,5 +1,6 @@
 const id = DOMid => document.getElementById(DOMid)
 
+
 function onVisible(element, callback, on = 0) {
   new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -11,26 +12,23 @@ function onVisible(element, callback, on = 0) {
   }, {threshold: on}).observe(element)
 }
 
+
 onVisible(id('oferta'), () => {
     setTimeout(() => {
         id('oferta-text').dataset.visible = true
-    }, 200)
+    }, 100)
     setTimeout(() => {
         id('oferta-cards').dataset.visible = true
-    }, 500)
+    }, 300)
 }, .32)
 
+
 onVisible(id('o-firmie'), () => {
-    let time = 700
-
-    if(window.matchMedia(('(min-width: 901px)')).matches) {
-        time = 100
-    }
-
     setTimeout(() => {
         id('o-firmie-text').dataset.visible = true
-    }, time)
-}, .25)
+    }, 100)
+}, .4)
+
 
 onVisible(id('instagram'), () => {
     setTimeout(() => {

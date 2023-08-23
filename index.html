@@ -38,7 +38,7 @@
     <!-- HEADER -->
         <header class="
             fixed z-40 w-full top-0
-            bg-white data-[scrolled=true]:bg-[#ffffffcc]
+            bg-white data-[scrolled=true]:bg-[#ffffffee]
             hover:bg-white
             
             transition-colors
@@ -622,8 +622,6 @@
                 </div>
 
                 <div class="
-                    data-[visible=false]:p-0
-
                     xl:pl-24 lg:pl-20 min-[900px]:pl-10
 
                     relative z-20
@@ -639,8 +637,9 @@
                     xl:gap-[72px] gap-14
 
                     overflow-hidden
+                    data-[visible=false]:opacity-0 data-[visible=true]:opacity-100
                     data-[visible=true]:max-h-[1000px] max-h-0
-                    transition-[max-height,_padding-top] duration-[1500ms]
+                    transition-[max-height,_opacity] duration-[1500ms]
                 " id="o-firmie-text" data-visible="false">
                     <div>
                         <p class="text-xs leading-normal text-[#F5F0EC] tracking-[-.12px] mb-4">O firmie</p>
@@ -727,11 +726,13 @@
                         md:mb-24 max-[500px]:mb-12 mb-20
                     ">
                         Nasze <span class="font-inter italic">projekty</span>
-                    </h2>            
+                    </h2>
                 </div>
 
                 <div class="
-                    peer max-h-[99999px] data-[invisible=true]:max-h-0 transition-[max-height] duration-500
+                    peer max-h-[9300px] opacity-100
+                    data-[invisible=true]:max-h-0 data-[invisible=true]:opacity-0
+                    transition-[max-height,_opacity] duration-[max-height_3s,_opacity_1.5s]
                     overflow-hidden
                 " id="projekty-imgs">
                     <img class="block mx-auto pb-12" src="./imgs/load.svg" alt="Zdjęcia właśnie się ładują">
