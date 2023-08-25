@@ -1084,6 +1084,10 @@ video {
   background-color: rgb(245 240 236 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1812,6 +1816,18 @@ video {
   fill: #1B5B31;
 }
 
+.group.is-active .group-\[\.is-active\]\:mt-6 {
+  margin-top: 1.5rem;
+}
+
+.group.is-active .group-\[\.is-active\]\:mt-\[30px\] {
+  margin-top: 30px;
+}
+
+.group.is-active .group-\[\.is-active\]\:mt-\[28px\] {
+  margin-top: 28px;
+}
+
 .group.is-active .group-\[\.is-active\]\:max-h-\[200px\] {
   max-height: 200px;
 }
@@ -1824,6 +1840,11 @@ video {
 .group.is-active .group-\[\.is-active\]\:scale-y-\[-1\] {
   --tw-scale-y: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/scrolleddata-[scrolled=true] .group-\[data-\[scrolled\=true\]\]\/scrolled\:bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .group.is-active .group-\[\.is-active\]\:pb-4 {
@@ -1886,6 +1907,19 @@ video {
 
 .data-\[visible\=true\]\:opacity-100[data-visible=true] {
   opacity: 1;
+}
+
+.group\/scrolled[data-scrolled=true] .group-data-\[scrolled\=true\]\/scrolled\:bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.group\/scrolled[data-scrolled=true] .group-data-\[scrolled\=true\]\/scrolled\:bg-\[\#ffffffee\] {
+  background-color: #ffffffee;
+}
+
+.group\/scrolled[data-scrolled=true] .group-data-\[scrolled\=true\]\/scrolled\:bg-transparent {
+  background-color: transparent;
 }
 
 @media (max-width: 1150px) {
@@ -2507,6 +2541,14 @@ video {
 
   .group.is-active .min-\[1001px\]\:group-\[\.is-active\]\:p-6 {
     padding: 1.5rem;
+  }
+
+  .group.is-active .min-\[1001px\]\:group-\[\.is-active\]\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .group\/scrolled[data-scrolled=true] .min-\[1001px\]\:group-data-\[scrolled\=true\]\/scrolled\:bg-\[\#ffffffee\] {
+    background-color: #ffffffee;
   }
 }
 

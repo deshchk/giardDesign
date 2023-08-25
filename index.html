@@ -37,6 +37,7 @@
 
     <!-- HEADER -->
         <header class="
+            group/scrolled
             fixed z-40 w-full top-0
             bg-white data-[scrolled=true]:bg-[#ffffffee]
             hover:bg-white
@@ -140,18 +141,19 @@
                             
                             <ul class="
                                 min-[1001px]:absolute top-4 left-[-1.5rem]
-                                min-[1001px]:group-[.is-active]:p-6 
+                                min-[1001px]:group-[.is-active]:p-6
+                                min-[1001px]:group-[.is-active]:pt-0
                                 group-[.is-active]:pb-4
                                 min-[1001px]:px-6 min-[400px]:px-6
                                 min-[1001px]:gap-4
 
                                 flex flex-col gap-6 max-[1000px]:items-end
-                                bg-white
+                                bg-white min-[1001px]:group-data-[scrolled=true]/scrolled:bg-[#ffffffee] group-data-[scrolled=true]/scrolled:bg-transparent
                                 min-[1001px]:rounded-br-xl min-[1001px]:rounded-bl-xl
                                 cursor-default
 
                                 max-h-0 group-[.is-active]:max-h-[200px]
-                                group-[.is-active]:pt-6
+                                group-[.is-active]:mt-[30px]
                                 overflow-hidden transition-all z-30
                             " id="nav-oferta-sub">
                                 <li class="w-fit cursor-pointer">
@@ -226,7 +228,7 @@
                         </button>
                         
                         <input class="
-                            border-b border-neutral-500
+                            border-b border-neutral-500 bg-transparent
                             outline outline-0 rounded-none
                             font-inter text-sm
                             order-1
