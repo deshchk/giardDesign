@@ -1097,7 +1097,7 @@ video {
   background-image: linear-gradient(to top, #DCC1AB 44px, transparent);
 }
 
-.bg-\[url\(\.\.\/imgs\/card-grain\.svg\)\] {
+.bg-\[url\(\.\/imgs\/card-grain\.svg\)\] {
   background-image: url(../imgs/card-grain.svg);
 }
 
