@@ -1098,19 +1098,19 @@ video {
 }
 
 .bg-\[url\(\.\.\/imgs\/card-grain\.svg\)\] {
-  background-image: url(./imgs/card-grain.svg);
+  background-image: url(../imgs/card-grain.svg);
 }
 
 .bg-\[url\(\.\/imgs\/eye\.png\)\] {
-  background-image: url(./imgs/eye.png);
+  background-image: url(../imgs/eye.png);
 }
 
 .bg-\[url\(\.\/imgs\/pencil\.png\)\] {
-  background-image: url(./imgs/pencil.png);
+  background-image: url(../imgs/pencil.png);
 }
 
 .bg-\[url\(\.\/imgs\/stars\.png\)\] {
-  background-image: url(./imgs/stars.png);
+  background-image: url(../imgs/stars.png);
 }
 
 .bg-contain {
@@ -2259,12 +2259,12 @@ video {
   }
 
   .min-\[655px\]\:before\:content-\[url\(\.\/imgs\/pencil\.png\)\]::before {
-    --tw-content: url(./imgs/pencil.png);
+    --tw-content: url(../imgs/pencil.png);
     content: var(--tw-content);
   }
 
   .min-\[655px\]\:before\:content-\[url\(\.\/imgs\/stars\.png\)\]::before {
-    --tw-content: url(./imgs/stars.png);
+    --tw-content: url(../imgs/stars.png);
     content: var(--tw-content);
   }
 }
@@ -2493,7 +2493,7 @@ video {
   }
 
   .min-\[971px\]\:before\:content-\[url\(\.\/imgs\/eye\.png\)\]::before {
-    --tw-content: url(./imgs/eye.png);
+    --tw-content: url(../imgs/eye.png);
     content: var(--tw-content);
   }
 }
